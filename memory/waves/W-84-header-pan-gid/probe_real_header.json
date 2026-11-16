@@ -1,0 +1,73 @@
+{
+  "headerCount": 1,
+  "headerStyles": [
+    {
+      "h": 268,
+      "w": 690,
+      "overflow": "visible",
+      "position": "relative",
+      "minHeight": "auto",
+      "styleAttr": "margin-top: 0px; min-height: 268px; height: auto;",
+      "html": "<header style=\"margin-top: 0px; min-height: 268px; height: auto;\"><p class=\"docx-preview-host_a8\"><span><div style=\"width: 1160px; height: 268px; display: block; position: relative; left: 0px; top: 0px; text-indent: 0px;\"><img src=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEBLAEsAAD/7QAsUGhvdG9zaG9wIDMuMAA4QklNA+0AAAAAABABLAAAAAEAAQEsAAAAAQAB/+E122h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4wLWMwMDAgNzkuZjg0NWViMSwgMjAyMi8xMS8wMy0xOToyODo0NSAgICAgICAgIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnhtcEdJbWc9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9nL2ltZy8iCiAgICAgICAgICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgICAgICAgICB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6aWxsdXN0cmF0b3I9Imh0dHA6Ly9ucy5hZG9iZS5jb20vaWxsdXN0cmF0b3IvMS4wLyIKICAgICAgICAgICAgeG1sbnM6cGRmPSJodHRwOi8vbnMuYWRvYmUuY29tL3BkZi8xLjMvIj4KICAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9qcGVnPC9kYzpmb3JtYXQ+CiAgICAgICAgIDxkYzp0aXRsZT4KICAgICAgICAgICAgPHJkZjpBbHQ+CiAgICAgICAgICAgICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+0YjQsNCx0LvQvtC9INGI0LDQv9C60Lg8L3JkZjpsaT4KICAgICAgICAgICAgPC9yZGY6QWx0PgogICAgICAgICA8L2RjOnRpdGxlPgogICAgICAgICA8eG1wOk1ldGFkYXRhRGF0ZT4yMDI2LTAzLTI3VDE0OjEzOjE2KzAzOjAwPC94bXA6TWV0YWRhdGFEYXRlPgogICAgICAgICA8e"
+    }
+  ],
+  "headerImgs": [
+    {
+      "natural": [
+        2480,
+        573
+      ],
+      "offset": [
+        1160,
+        268
+      ],
+      "display": "inline-block",
+      "visibility": "visible",
+      "position": "static",
+      "top": "0px",
+      "left": "0px",
+      "maxWidth": "100%",
+      "srcLen": 277103,
+      "srcPrefix": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEBLAEsA",
+      "parentTag": "DIV",
+      "parentClass": "",
+      "parentPos": "relative",
+      "parentOverflow": "visible",
+      "parentWH": [
+        1160,
+        268
+      ],
+      "parentStyle": "width: 1160px; height: 268px; display: block; position: relative; left: 0px; top: 0px; text-indent: 0px;"
+    }
+  ],
+  "allImgCount": 1,
+  "allImgs": [
+    {
+      "natural": [
+        2480,
+        573
+      ],
+      "offset": [
+        1160,
+        268
+      ],
+      "display": "inline-block",
+      "visibility": "visible",
+      "position": "static",
+      "top": "0px",
+      "left": "0px",
+      "maxWidth": "100%",
+      "srcLen": 277103,
+      "srcPrefix": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEBLAEsA",
+      "parentTag": "DIV",
+      "parentClass": "",
+      "parentPos": "relative",
+      "parentOverflow": "visible",
+      "parentWH": [
+        1160,
+        268
+      ],
+      "parentStyle": "width: 1160px; height: 268px; display: block; position: relative; left: 0px; top: 0px; text-indent: 0px;"
+    }
+  ]
+}

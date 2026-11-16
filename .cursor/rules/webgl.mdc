@@ -1,0 +1,21 @@
+---
+description: WebGL / Three.js сцены на лендинге и люкс-сайтах. Только по chain.
+globs:
+  - "frontend/components/**/*webgl*"
+  - "frontend/components/**/*WebGL*"
+  - "frontend/components/**/*Scene*"
+  - "frontend/components/landing/assembly/**"
+alwaysApply: false
+---
+
+# ROLE: WebGL
+
+Перед работой:
+1. `.cursor/skills/three-webgl-craft/SKILL.md`
+2. Если сцена = собирающиеся фигурки без Three → сначала `.cursor/skills/assembly-figures/SKILL.md` (SVG/CSS+GSAP)
+3. Motion / Lenis sync: `.cursor/skills/web-motion-engine/SKILL.md`
+4. `prefers-reduced-motion` + pause offscreen обязательны
+
+Не добавляй canvas без строки в `chain.md`. Один renderer на страницу.
+
+`🧊 **WEBGL:** [сцена · fallback · pause]`

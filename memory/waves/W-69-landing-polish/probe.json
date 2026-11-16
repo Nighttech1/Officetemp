@@ -1,0 +1,18 @@
+{
+  "services": {
+    "bg": "rgb(10, 10, 10)",
+    "fontSize": 16,
+    "imgW": 544,
+    "imgH": 768,
+    "imgRightish": true,
+    "theme": "black"
+  },
+  "marquee": {
+    "borderTop": "0px",
+    "borderBottom": "0px",
+    "bg": "rgb(247, 247, 245)",
+    "mb": 136,
+    "sectionBg": "rgb(247, 247, 245)",
+    "sameBg": true
+  }
+}

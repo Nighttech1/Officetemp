@@ -1,0 +1,38 @@
+# Release overlay for Doc SaaS (localhost package + VPS-ready when Client says «да»)
+#
+# Localhost:
+#   docker compose -f docker-compose.yml -f docker-compose.release.yml up -d --build
+#
+# VPS (ONLY after Client «да» / «согласовано»):
+#   same files + .env.production (see docs/RELEASE.md, docs/VPS_READINESS.md)
+#   NEVER use default JWT_SECRET / Postgres passwords from examples.
+
+services:
+  api:
+    environment:
+      STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
+      LOCAL_BLOB_ROOT: ${LOCAL_BLOB_ROOT:-/app/.runtime/blobs}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM: ${SMTP_FROM:-noreply@docsaas.local}
+      SMTP_TO: ${SMTP_TO:-}
+      SMTP_USE_TLS: ${SMTP_USE_TLS:-true}
+      FORMS_RUNTIME_DIR: /app/.runtime/forms
+    volumes:
+      - docsaas_artifacts:/app/.runtime
+      - docsaas_blobs:/app/.runtime/blobs
+
+  worker:
+    environment:
+      STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
+      LOCAL_BLOB_ROOT: ${LOCAL_BLOB_ROOT:-/app/.runtime/blobs}
+    volumes:
+      - docsaas_artifacts:/app/.runtime
+      - docsaas_blobs:/app/.runtime/blobs
+
+  beat:
+    volumes:
+      - docsaas_artifacts:/app/.runtime
+      - docsaas_blobs:/app/.runtime/blobs

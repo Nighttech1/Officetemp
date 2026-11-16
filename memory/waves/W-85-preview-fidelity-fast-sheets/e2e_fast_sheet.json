@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "calls": [
+    {
+      "label": "sharing",
+      "status": 200,
+      "ms": 5606,
+      "nbytes": 2923847,
+      "rows": 3506,
+      "cols": 19,
+      "via": "export_csv_gid",
+      "gid": 124580750,
+      "sheet": "Журнал выдачи ПД 2026",
+      "has_cipher": true
+    },
+    {
+      "label": "gid",
+      "status": 200,
+      "ms": 2947,
+      "nbytes": 2923849,
+      "rows": 3506,
+      "cols": 19,
+      "via": "export_csv_gid",
+      "gid": 124580750,
+      "sheet": "Журнал выдачи ПД 2026",
+      "has_cipher": true
+    },
+    {
+      "label": "cache",
+      "status": 200,
+      "ms": 167,
+      "nbytes": 2923847,
+      "rows": 3506,
+      "cols": 19,
+      "via": "export_csv_gid",
+      "gid": 124580750,
+      "sheet": "Журнал выдачи ПД 2026",
+      "has_cipher": true
+    }
+  ]
+}

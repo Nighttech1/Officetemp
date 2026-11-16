@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "canvas": { "width": 720, "height": 720, "bg": "transparent" },
+  "figures": [
+    {
+      "id": "disc-main",
+      "type": "disc",
+      "color": "#d9d2c6",
+      "x": 360,
+      "y": 310,
+      "rot": -14,
+      "scale": 1,
+      "w": 240,
+      "h": 240,
+      "scatter": { "x": -160, "y": 140, "rot": 40 },
+      "delay": 0.02
+    },
+    {
+      "id": "cylinder-tall",
+      "type": "cylinder",
+      "color": "#ebe4d8",
+      "x": 490,
+      "y": 260,
+      "rot": 10,
+      "scale": 1,
+      "w": 100,
+      "h": 210,
+      "scatter": { "x": 170, "y": -100, "rot": -28 },
+      "delay": 0.08
+    },
+    {
+      "id": "cone-a",
+      "type": "cone",
+      "color": "#cfc6b8",
+      "x": 250,
+      "y": 400,
+      "rot": -6,
+      "scale": 1,
+      "w": 150,
+      "h": 170,
+      "scatter": { "x": -110, "y": 180, "rot": 22 },
+      "delay": 0.12
+    },
+    {
+      "id": "ring-soft",
+      "type": "ring",
+      "color": "#e7e0d4",
+      "x": 420,
+      "y": 430,
+      "rot": 18,
+      "scale": 1,
+      "w": 170,
+      "h": 170,
+      "scatter": { "x": 130, "y": 150, "rot": -40 },
+      "delay": 0.16
+    },
+    {
+      "id": "bar-flat",
+      "type": "bar",
+      "color": "#b7ae9f",
+      "x": 280,
+      "y": 230,
+      "rot": 36,
+      "scale": 1,
+      "w": 190,
+      "h": 34,
+      "scatter": { "x": -70, "y": -120, "rot": -18 },
+      "delay": 0.2
+    },
+    {
+      "id": "capsule-accent",
+      "type": "capsule",
+      "color": "#22c55e",
+      "x": 530,
+      "y": 390,
+      "rot": -22,
+      "scale": 1,
+      "w": 54,
+      "h": 150,
+      "scatter": { "x": 190, "y": 70, "rot": 36 },
+      "delay": 0.24
+    },
+    {
+      "id": "disc-small",
+      "type": "disc",
+      "color": "#aaa193",
+      "x": 210,
+      "y": 290,
+      "rot": 0,
+      "scale": 1,
+      "w": 96,
+      "h": 96,
+      "scatter": { "x": -150, "y": -30, "rot": 60 },
+      "delay": 0.28
+    },
+    {
+      "id": "cone-b",
+      "type": "cone",
+      "color": "#ddd5c8",
+      "x": 500,
+      "y": 500,
+      "rot": 12,
+      "scale": 1,
+      "w": 100,
+      "h": 120,
+      "scatter": { "x": 80, "y": 170, "rot": -12 },
+      "delay": 0.32
+    }
+  ]
+}

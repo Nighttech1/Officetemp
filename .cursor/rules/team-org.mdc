@@ -1,0 +1,61 @@
+---
+description: Организация шаблонной команды агентов. Универсальная KB плюс точка расширения новыми агентами.
+globs: "*"
+alwaysApply: true
+---
+
+# Организация команды
+
+Карта: `TEAM_ARCHITECTURE.md`.
+Реестр: `.cursor/registry/agents.md`.
+Цикл: `CLIENT_ORCHESTRATOR_CYCLE.md` + `.cursor/prompts/start-client-orchestrator-cycle.md`.
+Второй цикл: `SECOND_SECURITY_CYCLE.md` + `.cursor/prompts/start-second-security-cycle.md`.
+Промты запуска: файл `promts`.
+База знаний: `knowledge/` (универсальная; не читать чужой домен).
+
+## Два + один контур
+
+1. Инженерный (основной): Оркестратор → **Тренер** → Архитектор → специалисты (в т.ч. Personal-Data DB, Payment Processor) → Тестировщик → Фиксер → Деплоер
+2. Приёмка: Клиент
+3. **Второй цикл безопасности** (по спецкоманде): Security + Hacker — см. `SECOND_SECURITY_CYCLE.md`  
+   (и там тоже: **Тренер** до Архитектора scope)
+
+## Базовая команда Оркестратора
+
+Клиент, Оркестратор, **Тренер**, Архитектор, Фронтендер, **Landing Promo**, Motion, Бекендер, **Personal-Data DB**, **Payment Processor**, Doc Engine / коннекторы, Тестировщик, Фиксер, Деплоер.  
+**Тренер** — каждый ход: грейд команды, дополнение skills/rules/plugins/MCP; при правках пользователя — сначала gap знаний.  
+**Security** и **Hacker** — не в каждой фазе; только второй цикл.
+
+Профиль по умолчанию: **Doc SaaS** (FastAPI + PostgreSQL + Celery + React/Next, генерация DOCX/PDF, 152-ФЗ). См. `architecture.md` + `roadmap.md`.  
+Опциональный контур Sputnik/Cortana — только если Архитектор явно включил в `chain.md`. Motion/WebGL / Landing Promo — только по `chain.md`.
+
+## Skill-first
+
+Каждая роль читает:
+1. своё `.cursor/rules/<role>.mdc`
+2. `SKILL.md` из `.cursor/skills/`
+3. плагины `plugins/<role>/` если есть
+4. оболочку `knowledge/engineering/roles/<role>.md`
+5. Домен текущего продукта: `architecture.md`, `roadmap.md` (Doc SaaS); `knowledge/area_*` — только своей зоны
+6. толстые `knowledge/engineering/sources/` — только если скилла мало
+
+Не открывать все PDF/sources «на всякий случай».
+
+## Расширяемость
+
+Сюда складываем новых агентов и новые skills по мере нужды в проектах.
+
+Чеклист нового агента:
+1. `.cursor/rules/<role>.mdc`
+2. `.cursor/skills/<name>/SKILL.md`
+3. запись в `.cursor/registry/agents.md`
+4. оболочка `knowledge/engineering/roles/<role>.md` при необходимости
+5. для Motion — `motion.mdc` + `web-motion-engine`
+
+После регистрации агент — часть команды Оркестратора. Подключать только когда задача этого требует.
+
+**Тренер** регистрирует новых агентов/скиллы по пробелам хода; Оркестратор зовёт Тренера **в начале каждой волны** и **перед реакцией на правки пользователя**.
+
+## Журнал memory/
+
+Шаблоны: `memory/_templates/`. Инженеров звать только при `chain.md`. Закрытие `C-*` только с guard. Папки тикетов после done не удалять.

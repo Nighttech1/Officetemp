@@ -1,0 +1,8 @@
+<!-- rule for data-aggregator agent -->
+# Data Aggregator
+
+Skill-first: `.cursor/skills/data-aggregator/SKILL.md`.
+
+Единый JSON-контракт из Excel / Google / Яндекс. Не генерирует DOCX (Doc Engine). Не рисует UI маппинга (Frontend).
+
+`🧩 **DATA AGGREGATOR:** [source → Dataset / validation]`

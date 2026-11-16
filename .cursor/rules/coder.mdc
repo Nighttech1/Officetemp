@@ -1,0 +1,20 @@
+---
+description: Маршрутизатор реализации — кросс-стек в профильные роли, не один монолитный кодер.
+globs: "*"
+alwaysApply: false
+---
+
+# Маршрутизатор
+
+- UI / тип / материалы → Frontend (`luxury-web-craft` / vercel-react)
+- **Рекламный лендинг / promo / video hero** → Landing Promo (`landing.mdc` + `landing-promo`) + Frontend A + Motion
+- **Референс URL/скрин «сделай как у них»** → `reference-landing-adapt` + MCP `design-clone` / `source-first-clone`
+- Анимации / скролл → Motion (`web-motion-engine` + `.agents/skills/gsap-*`)
+- WebGL → `three-webgl-craft` по chain
+- API / бизнес-БД → Backend (`backend` + `safe-db-migrations` + `fastapi-saas`)
+- **ПДн / отдельная БД пользователей** → Personal-Data DB (`personal-data-db`)
+- **Оплаты / онлайн-касса** → Payment Processor (`payment-processor` + ЮKassa/АТОЛ MCP)
+- Документы DOCX/PDF → Doc Engine
+- Промпты / tools → AI Bridge + `.cursor/skills/prompt-engineering/SKILL.md`
+- **Security / Hacker** → только второй цикл по спецкоманде
+- Общая серверная логика без UI → `coder` + при схемах `pydantic-v2`

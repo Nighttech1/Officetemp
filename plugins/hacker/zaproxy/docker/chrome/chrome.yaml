@@ -1,0 +1,25 @@
+---
+env:
+  contexts:
+  - name: "Chrome Headless Test"
+    urls:
+    - "https://www.zaproxy.com"
+  parameters:
+    failOnError: true
+    failOnWarning: true
+    progressToStdout: true
+jobs:
+- parameters:
+    maxDuration: 1
+    numberOfBrowsers: 1
+    browserId: "chrome-headless"
+  tests:
+  - name: "At least one URL found"
+    onFail: "WARN"
+    statistic: "stats.client.spider.urls"
+    site: ""
+    operator: ">="
+    value: 1
+    type: "stats"
+  name: "spiderClient"
+  type: "spiderClient"

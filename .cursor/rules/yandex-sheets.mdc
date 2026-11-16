@@ -1,0 +1,8 @@
+<!-- rule for yandex-sheets agent -->
+# Yandex Tables
+
+Skill-first: `.cursor/skills/yandex-sheets/SKILL.md`.
+
+РФ-контур и 152-ФЗ. Read-only по умолчанию. Выход — через Data Aggregator.
+
+`📒 **YANDEX TABLES:** [source_ref → rows / аудит]`

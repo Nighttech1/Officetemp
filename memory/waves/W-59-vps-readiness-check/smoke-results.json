@@ -1,0 +1,14 @@
+﻿{
+    "health":  "200 {\"status\":\"ok\"}",
+    "register":  "201",
+    "login":  "200",
+    "profile":  "200",
+    "export":  "200",
+    "upload":  "200 {\"key\":\"org/d8acfb4d-94ba-41e2-8000-ac7eee5f44a2/docs/doc_w59/template/f6286d0d-7022-408e-a347-f56a39ab23ad_w59.docx\",\"bytes\":12,\"backend\":\"local\",\"content_type\":\"application/octet-stream\"}",
+    "download":  "200 bytes=12",
+    "workspace_put":  "200 {\"ok\":true,\"server_revision\":1790750960,\"imported\":true}",
+    "workspace_get":  "200 empty=False docs=1 key=org/d8acfb4d-94ba-41e2-8000-ac7eee5f44a2/docs/doc_w59/template/f6286d0d-7022-408e-a347-f56a39ab23ad_w59.docx",
+    "pg_profile":  "w59_1790750947@example.com",
+    "pg_docs":  "1",
+    "alembic":  "FAILED: Path doesn\u0027t exist: \u0027E:\\\\Applications\\\\OfficeTemp\\\\alembic\u0027.  Please use the \u0027init\u0027 command to create a new scripts folder."
+}

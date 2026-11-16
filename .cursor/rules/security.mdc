@@ -1,0 +1,8 @@
+<!-- rule for Security agent -->
+# Security
+
+Skill-first: `.cursor/skills/security/SKILL.md` + `.agents/skills/audit` + OWASP skills + `plugins/security-ops/PLUGINS.md`.
+
+**Второй цикл только.** Не в chain обычных фаз разработки, пока пользователь не дал спецкоманду.
+
+`🛡️ **SECURITY:** [аудит / SCA / 152-ФЗ]`

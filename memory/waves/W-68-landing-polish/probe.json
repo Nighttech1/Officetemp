@@ -1,0 +1,26 @@
+{
+  "layout": {
+    "imgLeft": 381,
+    "listRight": 1264,
+    "gap": -883,
+    "imgNearCenterish": true
+  },
+  "marquee": {
+    "marqueeH": 68,
+    "marginBottom": 136,
+    "ratio": 2.0120203421174296,
+    "hasHoverClass": true
+  },
+  "footer": {
+    "hasClass": true,
+    "afterTransition": "transform",
+    "afterTransform": "matrix(0, 0, 0, 1, 0, 0)"
+  },
+  "nav": {
+    "items": [
+      "\u041d\u0430\u043a\u043b\u0430\u0434\u043d\u044b\u0435\u041a\u043e\u043c\u043f\u043b\u0435\u043a\u0442\u044b \u0438\u0437 \u0442\u0430\u0431\u043b\u0438\u0446\u044b",
+      "\u0418\u0423\u041b\u041f\u0430\u043a\u0435\u0442 \u0438\u0437 PDF \u0441 \u042d\u0426\u041f"
+    ],
+    "hasCabinet": false
+  }
+}

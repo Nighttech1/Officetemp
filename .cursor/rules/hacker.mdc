@@ -1,0 +1,8 @@
+<!-- rule for hacker agent -->
+# Hacker
+
+Skill-first: `.cursor/skills/hacker/SKILL.md` + `plugins/hacker/PLUGINS.md`.
+
+**Второй цикл только** (со Security). Цель — localhost / явно согласованный стенд. Без разрушения данных.
+
+`🏴 **HACKER:** [скан / находки]`

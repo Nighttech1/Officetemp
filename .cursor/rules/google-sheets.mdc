@@ -1,0 +1,8 @@
+<!-- rule for google-sheets agent -->
+# Google Sheets
+
+Skill-first: `.cursor/skills/google-sheets/SKILL.md`.
+
+Секреты не логировать. Для ПДн РФ предпочитать Яндекс / локальный Excel. Выход — через Data Aggregator.
+
+`📗 **GOOGLE SHEETS:** [source_ref → rows / scopes]`

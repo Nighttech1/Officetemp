@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "C-821-real-header-image",
+      "ok": true,
+      "detail": {
+        "headerCount": 1,
+        "headerH": 197,
+        "imgs": [
+          {
+            "nw": 2480,
+            "nh": 573,
+            "ow": 854,
+            "oh": 197,
+            "parentW": 854
+          }
+        ]
+      }
+    },
+    {
+      "name": "C-820-pan-document-only",
+      "ok": true,
+      "detail": {
+        "x": -360,
+        "y": 0,
+        "scale": 0.990632,
+        "docW": 845.999728,
+        "docH": 1143.189328,
+        "vw": 486,
+        "vh": 1154,
+        "xOk": true,
+        "yOk": true
+      }
+    },
+    {
+      "name": "C-822-google-connect-ui",
+      "ok": true,
+      "detail": {
+        "snippet": "Демо-проект\n+ Новый проект\nНакладные\nНастройки реестра\nИУЛ\nНАКЛАДНЫЕ\n\nСлева выберите накладную и нужные ИУЛ (Ctrl/Shift). ИУЛ не переключают раздел — их поля подставятся на шаге «Данные».\n\nШАБЛОН\nДАННЫЕ\nСТЫКОВКА\nГЕНЕРАЦИЯ\nРЕЕСТР\nШАБЛОН\nДАННЫЕ\nСТЫКОВКА\nГЕНЕРАЦИЯ\nРЕЕСТР\n?\nСформировать DOCX\nСформировать PDF\n\nШаблон: nakladnaya1.docx\n\nДанные: ещё не загружены\n\nШаг 2. Данные\n\nВыберите один способ загру",
+        "connect_ok": true
+      }
+    }
+  ],
+  "template": "e:\\Applications\\OfficeTemp\\memory\\waves\\W-84-header-pan-gid\\nakladnaya1.docx"
+}

@@ -1,0 +1,19 @@
+{
+  "desktop": {
+    "pillarsCount": 3,
+    "pillarHasBorder": "1px",
+    "faqPresent": true,
+    "faqButtons": 5,
+    "h1Font": "97.6px",
+    "signatureW": 691,
+    "heroH": 836
+  },
+  "iphone": {
+    "heroH": 726,
+    "sceneTop": 419,
+    "sceneVisible": true,
+    "gapCtaToScene": 20,
+    "sceneW": 340,
+    "vh": 844
+  }
+}

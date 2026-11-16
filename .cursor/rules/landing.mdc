@@ -1,0 +1,34 @@
+---
+description: Рекламный лендинг Doc SaaS — видео, GSAP, scroll cinema. Активируется по chain для публичной витрины.
+globs:
+  - "frontend/app/page.tsx"
+  - "frontend/app/(marketing)/**"
+  - "frontend/components/landing/**"
+  - "frontend/components/film/**"
+  - "frontend/public/**/*.{mp4,webm,webp,avif}"
+alwaysApply: false
+---
+
+# ROLE: Landing Promo (маркетинговая витрина)
+
+Не кабинет `/app`. Публичная страница продукта.
+
+Перед работой:
+1. `.cursor/skills/landing-promo/SKILL.md` — pipeline и выбор signature
+1b. **ОБЯЗАТЕЛЬНО** `.cursor/skills/landing-client-ready/SKILL.md` — presence gate (density 6–7); без него нельзя сдавать «заказчику»
+2. **Референс URL/скрин:** `.cursor/skills/reference-landing-adapt/SKILL.md` + MCP `design-clone` / `source-first-clone`
+2b. **Собирающиеся фигурки (editable):** `.cursor/skills/assembly-figures/SKILL.md` (+ WebGL/`three-webgl-craft` только если chain явно просит Three)
+3. `.agents/skills/frontend-design/SKILL.md`
+4. `.agents/skills/impeccable/SKILL.md` (+ `reference/animate.md` при motion)
+5. При элите: `.agents/skills/awwwards-landing/SKILL.md` (стек → **GSAP/Lenis**, не Framer по умолчанию)
+6. Видео: `scroll-scrub-video` | `cinematic-scrub-landing` | `remotion-best-practices` | `video-edit`
+7. Product demo без MP4: `gsap-choreography` | `vignette`
+8. Официальный GSAP: `.agents/skills/gsap-core` … `gsap-scrolltrigger` / `gsap-react`
+9. Локально: `luxury-web-craft`, `web-motion-engine`, `asset-pipeline`, `responsive-mobile-web`, `mobile-touch-scroll`
+10. HF (кадры/черновики): MCP `gr1_z_image_turbo_generate` / `dynamic_space` → потом `asset-pipeline`
+11. Приёмка: `web-visual-critic/checklist-landing-presence.md`
+12. **21st.dev каталог:** `.cursor/skills/twentyfirst-mcp/SKILL.md` + `.agents/skills/21st-ui-explore` / `21st-ui-build` — Клиент выбирает, Frontend встраивает
+
+Работает в паре с Frontend (профиль A) и Motion по `chain.md`.
+
+`📣 **LANDING:** [signature · client-ready · density · URL localhost]`

@@ -1,0 +1,24 @@
+{
+  "desktop": {
+    "cssBrand": "#22c55e",
+    "btnBg": "rgb(34, 197, 94)",
+    "favicons": [
+      "http://127.0.0.1:3000/icon?5fad934b58d984df",
+      "http://127.0.0.1:3000/apple-icon?b97a04afcb2ef821"
+    ],
+    "hasOldNavDots": false,
+    "chevronCount": 2,
+    "faq": true,
+    "introBg": "rgb(247, 247, 245)",
+    "h1Font": "97.6px",
+    "signaturePct": 48,
+    "nextDevBadge": false
+  },
+  "faviconIcon": 200,
+  "appleIcon": 200,
+  "iphone": {
+    "gap": 20,
+    "sceneVisible": true,
+    "brand": "#22c55e"
+  }
+}

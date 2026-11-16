@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "wave": "W-82",
+  "checks": [
+    { "name": "toolbar-absolute", "ok": true },
+    { "name": "headers-footers", "ok": true },
+    { "name": "zoom-50-150", "ok": true },
+    { "name": "contour-after-usememo-fix", "ok": true },
+    { "name": "client-playwright-gate", "ok": true, "note": "client.mdc updated" }
+  ]
+}

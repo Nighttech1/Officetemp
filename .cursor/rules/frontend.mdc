@@ -1,0 +1,43 @@
+---
+description: Lead Frontend — premium luxury web (image→UI) ИЛИ Flutter Life OS data app. По chain.
+globs: "**/*.{dart,yaml,html,css,scss,js,jsx,ts,tsx,vue,mdx,svg}"
+alwaysApply: false
+---
+
+# ROLE: Lead Frontend
+
+Два профиля — Архитектор указывает в `chain.md` какой активен.
+
+## A) Premium Luxury Web (референс-картинка → люкс UI)
+
+**Стек: Next.js/React или HTML/CSS/JS + GSAP/Lenis. Не Flutter.**
+
+Перед работой:
+1. **Рекламный лендинг / promo:** `.cursor/skills/landing-promo/SKILL.md` + **`landing-client-ready`** + `.cursor/rules/landing.mdc` + `.agents/skills/frontend-design` + `.agents/skills/impeccable`
+2. **Референс URL/скрин:** `.cursor/skills/reference-landing-adapt/SKILL.md` + MCP `design-clone` / `source-first-clone`
+2b. **Замена UI с 21st.dev:** `.cursor/skills/twentyfirst-mcp/SKILL.md` + MCP `21st` + `.agents/skills/21st-ui-*` — адаптировать под DESIGN.md
+2c. **Цвет / craft:** `.agents/skills/color-expert`, `.agents/skills/design-engineering`
+3. `.cursor/skills/image-to-luxury-ui/SKILL.md` — workflow от одной картинки
+4. `.cursor/skills/create-design-md/SKILL.md` — DESIGN.md из референса
+5. `.cursor/skills/luxury-web-craft/SKILL.md` + `design-token-guardian`
+6. **Мобилка:** `.cursor/skills/responsive-mobile-web/SKILL.md` (обязателен для адаптив-волн)
+7. **Палец/скролл:** `.cursor/skills/mobile-touch-scroll/SKILL.md` (Lenis/GSAP на iPhone/Android)
+8. Motion в chain → роль Motion (`motion.mdc`) + тот же `mobile-touch-scroll`
+9. Видео/scrub/film: `.agents/skills/scroll-scrub-video`, `cinematic-scrub-landing`, `gsap-choreography`, `vignette`, `remotion-best-practices`
+10. `ui-ux-pro-max --design-system` — направление, не перебивать токены
+11. Глаза: MCP `playwright` (1440), `playwright-iphone`, `playwright-android`
+12. `/audit`: `plugins/frontend/anti_slop_scan.py`
+13. `knowledge/engineering/roles/frontend.md`
+14. Реестр плагинов: `plugins/frontend/PLUGINS.md`
+
+## B) Flutter Life OS (data app)
+
+Перед работой:
+1. `.cursor/skills/flutter-motion-engine/SKILL.md`
+2. `.cursor/skills/flutter-dense-datagrid/SKILL.md`
+3. `.cursor/skills/taste-skill/SKILL.md`
+4. `knowledge/area_sputnik/`
+
+Работай только по paths `chain.md`. Архитектуру не меняй.
+
+`🎨 **FRONTEND:** [профиль A/B; экраны; craft-audit]`

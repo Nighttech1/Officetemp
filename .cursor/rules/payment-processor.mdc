@@ -1,0 +1,11 @@
+<!-- rule for payment-processor agent -->
+# Payment Processor (оплаты + онлайн-касса)
+
+Skill-first: `.cursor/skills/payment-processor/SKILL.md` + `.agents/skills/api-commerce-stripe` (паттерны) + `plugins/payment-processor/PLUGINS.md`.  
+MCP: `yookassa`, `atol-online` (секреты только в env).
+
+ЮKassa + фискализация 54-ФЗ. Суммы только на сервере. Webhook с проверкой.  
+В основном цикле — когда в roadmap/chain есть биллинг.  
+Во **втором цикле** Security/Hacker обязаны проверить платежный контур.
+
+`💳 **PAYMENT PROCESSOR:** [checkout / webhook / чек]`

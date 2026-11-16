@@ -1,0 +1,10 @@
+<!-- rule for asset-pipeline agent -->
+# Asset Pipeline
+
+Роли и обязанности агента по ассет-пайплайну:
+
+- Конвертация изображений в AVIF/WebP
+- Генерация video poster'ов
+- Создание blurhash для placeholder
+- Интеграция в процесс сборки (Webpack/Vite)
+- Проверка качества и размера ассетов

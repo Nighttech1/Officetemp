@@ -1,0 +1,35 @@
+# Local credentials and environments
+.env
+.env.*
+!.env.example
+!.env.production.example
+*.pem
+*.key
+*.pfx
+*.p12
+# Reinstallable dependencies and build outputs
+node_modules/
+.next/
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.tsbuildinfo
+coverage/
+htmlcov/
+# Local runtime state, databases, browser sessions
+.runtime/
+.tools/
+.playwright-mcp/
+.cache/
+*.log
+*.log.err
+*.db
+*.sqlite
+*.sqlite3
+chrome-profile*/
+cdp-profile*/
+cdp-[0-9]*/
+playwright-report/
+test-results/
+settings.local.json

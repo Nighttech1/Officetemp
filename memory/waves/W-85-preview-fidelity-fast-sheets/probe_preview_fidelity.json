@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "viewport-present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "C-851-floating-header-absolute",
+      "ok": true,
+      "detail": {
+        "headerH": 68,
+        "headerMarginTop": "-68.4px",
+        "headerMinHeight": "68.4px",
+        "imgPos": "absolute",
+        "imgWH": [
+          794,
+          183
+        ],
+        "natural": [
+          2480,
+          573
+        ],
+        "wrapWH": [
+          0,
+          0
+        ],
+        "wrapStyle": "width: 0px; height: 0px; display: inline-block; position: relative; left: 0.25pt; top: -32.88pt; text-indent: 0px; overflow: visible; vertical-align: top;",
+        "sectionFont": "",
+        "pFont": "",
+        "viewportOverflow": "auto"
+      }
+    },
+    {
+      "name": "C-851-doc-fonts",
+      "ok": true,
+      "detail": {
+        "root": "Calibri, \"Times New Roman\", Times, serif",
+        "samples": [
+          "Calibri",
+          "Calibri",
+          "Calibri",
+          "Calibri",
+          "Calibri",
+          "Calibri"
+        ]
+      }
+    },
+    {
+      "name": "C-852-pan-class",
+      "ok": true,
+      "detail": {
+        "cls": "docx-preview-viewport relative min-h-[18rem] w-full overflow-auto rounded-xl bg-transparent docx-preview-viewport--pan cursor-grab active:cursor-grabbing"
+      }
+    },
+    {
+      "name": "C-852-no-text-select-on-pan",
+      "ok": true,
+      "detail": {
+        "selLen": 0
+      }
+    }
+  ],
+  "tpl_bytes": 230345
+}

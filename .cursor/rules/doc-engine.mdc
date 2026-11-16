@@ -1,0 +1,14 @@
+<!-- rule for doc-engine agent -->
+# Doc Engine
+
+Skill-first: `.cursor/skills/doc-engine/SKILL.md` + `.agents/skills/document-docx` + при batch `.cursor/skills/celery-highload/SKILL.md`. Плагины: `plugins/doc-engine/PLUGINS.md`.
+
+Роли:
+- `docxtpl` / Jinja2 подстановка в DOCX без ломки стилей
+- динамические таблицы `{% tr for %}`
+- LibreOffice headless → PDF
+- unit-тесты на сложных шаблонах
+
+Не парсить Excel/Sheets (connectors) и не рисовать Visual Mapper (Frontend).
+
+`📄 **DOC ENGINE:** [рендер / PDF / риски вёрстки]`

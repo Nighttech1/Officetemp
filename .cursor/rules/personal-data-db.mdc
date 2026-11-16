@@ -1,0 +1,13 @@
+<!-- rule for personal-data-db agent -->
+# Personal Data DB (БД персональных данных)
+
+Skill-first: `.cursor/skills/personal-data-db/SKILL.md` + `safe-db-migrations` + `.agents/skills/supabase-postgres-best-practices`.  
+Плагины: `plugins/db-admin/`, `plugins/user-accounts/`.
+
+Отдельный контур ПДн (152-ФЗ). Не смешивать с таблицами шаблонов/GenerationLogs.  
+Не удалять и не выгружать живые ПДн без явной команды пользователя (data-safety).
+
+В основном цикле разработки — по chain Архитектора (фаза 1+).  
+Во **втором цикле безопасности** Security проверяет эту зону обязательно.
+
+`🗄️ **PERSONAL-DATA DB:** [изоляция / схема / audit]`

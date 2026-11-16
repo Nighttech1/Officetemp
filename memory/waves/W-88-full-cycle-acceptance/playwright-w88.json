@@ -1,0 +1,90 @@
+{
+  "ok": false,
+  "checks": {
+    "doc_bound": {
+      "pass": true,
+      "detail": null
+    },
+    "template_tab": {
+      "pass": true,
+      "detail": [
+        "Шаг 1. Шаблон Word"
+      ]
+    },
+    "template_upload": {
+      "pass": true,
+      "detail": null
+    },
+    "preview_ok": {
+      "pass": true,
+      "detail": {
+        "overflowX": "hidden",
+        "hScroll": false,
+        "hostW": 2556,
+        "sectionW": 1282,
+        "hostStyleW": "1282px",
+        "tdCenter": true
+      }
+    },
+    "overflow_hidden": {
+      "pass": true,
+      "detail": {
+        "overflowX": "hidden",
+        "hScroll": false,
+        "hostW": 2556,
+        "sectionW": 1282,
+        "hostStyleW": "1282px",
+        "tdCenter": true
+      }
+    },
+    "no_visible_hscroll_policy": {
+      "pass": true,
+      "detail": {
+        "overflowX": "hidden",
+        "hScroll": false,
+        "hostW": 2556,
+        "sectionW": 1282,
+        "hostStyleW": "1282px",
+        "tdCenter": true
+      }
+    },
+    "cells_center": {
+      "pass": true,
+      "detail": {
+        "overflowX": "hidden",
+        "hScroll": false,
+        "hostW": 2556,
+        "sectionW": 1282,
+        "hostStyleW": "1282px",
+        "tdCenter": true
+      }
+    },
+    "width_clamped": {
+      "pass": false,
+      "detail": {
+        "overflowX": "hidden",
+        "hScroll": false,
+        "hostW": 2556,
+        "sectionW": 1282,
+        "hostStyleW": "1282px",
+        "tdCenter": true
+      }
+    },
+    "registry": {
+      "pass": true,
+      "detail": [
+        "Шаг 4. Реестр результатов (необязательно)"
+      ]
+    },
+    "data_step": {
+      "pass": true,
+      "detail": [
+        "Шаг 2. Данные"
+      ]
+    }
+  },
+  "ts": "2026-10-04T00:05:06",
+  "failedKeys": [
+    "width_clamped"
+  ]
+}

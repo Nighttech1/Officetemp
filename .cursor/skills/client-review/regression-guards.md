@@ -1,0 +1,52 @@
+# Regression guards — Client
+
+- 2026-10-02 W-77: C-210 wizard bottom clip fixed (overflow-y-auto, no dvh lock). Playwright probe PASS. Client rules: Playwright+scenarios mandatory each acceptance.
+- 2026-10-02 W-76: C-207 MultiButton fillWidth; C-208 wizard/preview no clip; C-209 folder no form reset. Localhost :3000+:8005.
+- 2026-10-01 W-75: C-205 no h-scroll + vertical steps; C-206 Settings by library. Localhost :3000+:8005.
+- 2026-10-01 W-74: C-202 layout+tree chrome; C-203 MultiButton tree; C-204 preview resize + AuthGate non-blocking. Guards in tickets. Localhost :3000.
+- 2026-10-01 W-69: C-188 services labels ~88px + image right ×2 on black; C-189 marquee no border, cream gap. **Клиент: согласовано**.
+- 2026-10-01 W-68: C-185 services image beside labels; C-186 marquee mb=2×H + hover bold black; C-187 footer underline + no Кабинет in Решения. **Клиент: согласовано**.
+- 2026-10-01 W-67: C-182 nav/hero/trio; C-183 contact+contrast+footer; C-184 marquee+slideshow. Probe ok. Localhost :3000. **Клиент: согласовано**.
+- 2026-10-01 W-66: C-179 unified contour (footer/services/DocsContourBar/sidebar home); C-180 docs chrome motion; C-181 wizard fade-slide + glass hover (21st #7881 spirit). Probe ok. Localhost :3000+:8005. **Клиент: согласовано**.
+- 2026-09-30 W-65: C-176 Услуги rename+H-scroll lock/smooth/even gaps (+integrations); C-177 FAQ hover-only; C-178 login bold black. Probe: `memory/waves/W-65-landing-polish/probe.json`. **Клиент: согласовано**.
+- 2026-09-30 W-64 landing polish: C-171 CTA shimmer 5.6s; C-172 UseCases image marquee no arrows; C-173 ProductTrio denser; C-174 Capabilities hover+stable height; C-175 FAQ expand 550ms. Probe: `memory/waves/W-64-landing-polish/probe.json` + `probe-extra.json`. Screens: `after-*.png`. **Клиент: согласовано**.
+- 2026-09-30 W-63 landing polish: C-163 nav=hero grey seamless; C-164 mega=LoginPopover; C-165 login fields only; C-166 brand CTA+stats; C-167 drag carousel; C-168 capabilities vertical; C-169 FAQ shimmer; C-170 SaaS footer. Probe: `memory/waves/W-63-landing-polish/probe.json`. Клиент: согласовано (пачка 1–8).
+- 2026-09-30 W-62 landing finish: C-162 bright green `#22c55e`; C-155 icon/apple-icon 200; C-153 nav chevrons; C-159 shimmer CTA; C-156 `devIndicators:false`; C-161 Intro cream; C-158/C-150/C-160 polish. Probe: `memory/waves/W-62-landing-finish/probe.json`. **Клиент: согласовано** (витрина `/`).
+- 2026-09-30 W-61 landing: C-151 pillars/trio bento materials (21st 9594); C-157 FAQ accordion ×5 cream (21st 29935); C-154 mobile hero densify gap CTA→scene=20px. Probe: `memory/waves/W-61-landing-handoff/probe.json`. Guards: `memory/waves/W-61-landing-handoff/guards.md`.
+- 2026-09-29 W-60 landing handoff: C-148 type unlock (marketing h1≥38px, app floor 18px under `data-ui-floor`); C-149 HeroAtmosphere grain+blobs (21st 19381); C-145 signature≥40% + brand display. Screens: `memory/waves/W-60-landing-handoff/after-hero-*.png`. Guards: `memory/waves/W-60-landing-handoff/guards.md`.
+- 2026-09-25 W-41 ИУЛ: даты подписантов = дата изменения файла; Shift-диапазон в дереве; ConfirmDialog удаления; rename dblclick (C-95/C-96/C-97). Selftest C-95; UI: `ProjectSidebar` + `ConfirmDialog`.
+- 2026-09-25 W-46 ИУЛ: drag-drop+100МБ (C-103); подсветка активной папки (C-104); подписанты first-surname кроме Разработал (C-105). Selftest: `iul-formation.selftest.ts`. Guards: `C-103-iul-drop-100mb/`.
+- 2026-09-25 W-45 ИУЛ: вёрстка как reference-iul (C-101); наименование не примечания чертежа (C-102). Tests: `test_doc_name_rejects…`, `iul-pdf.selftest.ts`. Guards: `C-101-iul-layout-sample/`, `C-102-doc-name-not-notes/`.
+- 2026-09-25 W-44 ИУЛ PDF: подписи без растяжения, ячейки по центру, без «Продолжение УЛ», даты дд.мм.гггг (C-100). Selftest: `iul-pdf.selftest.ts`, `iul-hash.selftest.ts`. Guards: `memory/tickets/C-100-iul-pdf-layout-dates/`.
+- 2026-09-25 W-43 ИУЛ PDF: встроен DejaVuSans (кириллица), не Helvetica (C-99). Selftest: `iul-pdf.selftest.ts` → `sample-iul-cyrillic.pdf`. Guards: `memory/tickets/C-99-iul-pdf-cyrillic-fonts/`.
+- 2026-09-25 W-40 ИУЛ: наименование документа с титула (блок над шифром); запрет «Общие данные» (C-94). Tests: `test_iul_stamp.py` title/kj62. Guards: `memory/tickets/C-94-doc-name-title-page/`.
+- 2026-09-25 W-39 ИУЛ: нормоконтроль aliases → имя из настроек; КЖ6.2 полный шифр+Романов; sync не затирает iulSignSettings; Next proxy body 50mb (C-91/C-92/C-93). Tests: `test_iul_stamp.py::test_analyze_kj62…`, `iul-formation.selftest.ts`. Guards: `memory/tickets/C-91-normocontrol-roles/`, `C-92-kj6-stamp/`, `C-93-keep-project-settings/`.
+- 2026-09-24 W-30 ИУЛ: системная «Подписи»+таблица; папки/ИУЛ+; ПКМ удалить; без Шапки; preview×1.5; PDF-кнопка на линии шагов; SlideTabs без hover; ✕ подписанта; штамп все листы (C-69/C-70/C-71). Screens: `memory/tickets/C-69-iul-sidebar-folders/`. Guards: same folder.
+- 2026-09-24 W-29 ИУЛ UX C-68: objectName=имя проекта; библиотека «Подписи» в сайдбаре; без PDF-режима и без панели на шаге 4; вертикальные Tabs подписантов; SlideTabs шагов ИУЛ+накладная. Screens: `memory/tickets/C-68-iul-ux-tabs-library/`. Guards: `memory/tickets/C-68-iul-ux-tabs-library/guards.md`. (C-67 PDF-toggle снят намеренно.)
+- 2026-09-24 W-28 ИУЛ: тумблер «Из библиотеки / Из PDF» — вырезка росчерков из колонки «Подп.» штампа + upsert в библиотеку (C-67). Screen: `memory/tickets/C-67-sign-source-toggle/visual/`.
+- 2026-09-24 W-27 ИУЛ штамп+подписи: analyze-pdf читает ГОСТ-штамп (объект/шифр/роли); библиотека фамилия→PNG; автокартинка в ИУЛ (C-64/C-65/C-66). Artifact: `memory/tickets/C-66-iul-sign-image-match/artifacts/iul-with-sign.pdf`.
+- 2026-09-24 W-26 ИУЛ: `/app/documents/info-sheet` — мастер Файл→Шапка→Документ→Подписи→PDF; шаг 1 автохэш PDF в браузере; скачивание `*_УЛ_YYYY-MM-DD.pdf` (C-61/C-62/C-63). Artifact: `memory/tickets/C-63-iul-generate-pdf/artifacts/iul-download.pdf` (8914 B). Screens: `memory/tickets/C-61-iul-wizard-steps/visual/`.
+- 2026-09-23 W-25 same-origin API: browser calls `/api/v1` on :3010 via Next rewrite → :8001 (C-58). Eliminates cross-origin `Failed to fetch` on generate/docx. E2E: `memory/waves/W-25-fetch-fix/`.
+- 2026-09-23 W-24 download: generate `ensureDevSession` + human network errors; Client must download DOCX and compare to template before «согласовано» (C-56/C-57). Artifact: `memory/waves/W-24-download-fix/client-downloaded.docx`. Google id must be `…xo3…CCom4…` (not xa3/Com4).
+- 2026-09-22 W-08 dark premium: true dark `.glass-card` (card RGB≈20); aurora beam+grid; app shell soft aurora (C-24/C-25/C-26). Screens: `memory/waves/W-08-dark-premium/screens/`.
+- 2026-09-22 W-07 final: dark aurora/glass DocSaaS UI; contact form+API honeypot; assets/RELEASE pack (C-21/C-22/C-23). VPS gated.
+- 2026-09-22 W-06 hardening: load smoke 10/100/1000 rows; Playwright e2e cabinet; a11y skip-link/#main/focus (C-18/C-19/C-20).
+- 2026-09-22 W-05 highload: Celery eager jobs; ZIP download; 24h artifact cleanup under `.runtime/jobs` (C-15/C-16/C-17). Tests: `test_jobs_api.py`, `test_cleanup.py`.
+- 2026-09-22 W-04 frontend: DocSaaS Next cabinet `/login|/register|/app|/templates|/mapper|/generate`; `next build` green (C-11/C-12/C-13). Asset pipeline 4.5 backlog C-14.
+- 2026-09-22 W-03 data: Excel/CSV parse; Google/Yandex connectors (mocked); aggregator Dataset contract; `/api/v1/data/*` (C-08/C-09/C-10).
+- 2026-09-22 W-02b: PDF via in-process dxpdf (no LibreOffice/cloud) (C-07). Tests: `test_pdf_convert.py`.
+- 2026-09-22 W-02 Doc Engine: docxtpl flat tags; `{%tr for%}` row count; analyze tags (split runs); PDF via LO `--headless` mock (C-04/C-05/C-06). Tests: `backend/tests/test_doc_engine_*.py`, `test_template_analyzer.py`, `test_pdf_convert.py`, `test_generate_api.py`.
+- 2026-09-22 W-01 Doc SaaS Phase1: `/health` ok; User has no PII columns; tenant-scoped templates; JWT register/login/me; S3 presign key `org/{org_id}/templates/` (C-01/C-02/C-03). Tests: `backend/tests/test_*.py`.
+- 2026-09-09 W-03: text computed `rgb(42, 90, 132)` on h1/body/nav/footer (C-07).
+- 2026-09-09 W-03: `#formats/#atmosphere/#faq` `.reveal` opacity 1 after load (C-08).
+- 2026-09-09 W-03: `.site-footer-grid` 6 columns at 1440 (C-09).
+- 2026-09-10 W-06: fixed header overlays video; white nav on hero / azure when solid; CTA always white on terracotta; denser gallery (C-15/16/17).
+- 2026-09-10 W-07/W-08: opaque dropdown parchment; scroll reveal (no eager visible); Century Gothic global; club azure×3 + sports copy + seamless club/formats; formats hover desc; atmosphere side gutters; footer underline (C-18…C-23).
+- 2026-09-10 W-09: morph mega menu; about titles-only; CTA Присоединиться→MASClubb; bold nav; formats 3×2 + dance/padel; atmosphere wheel-lock; film cover zoom vars (C-24…C-26).
+- 2026-09-10 W-10: film quote delay+RU mark; smooth 8-photo gallery; FAQ×10 from prod; schedule pills; nav FAQ/plain links; left headers (C-27…C-29).
+- 2026-09-10 W-11: header-bg from IMG_7185.MOV @1.41→end loop; global scroll reveal (C-30/C-31).
+- 2026-09-10 W-12: page titles max-w-7xl align; wider calendar pills; CTA/detail shift; copy; footer logo-only (C-32…C-34).
+- Shots: `w12-schedule.png`, `w12-footer-bottom.png`.
+- 2026-09-11 W-21: mobile menu opaque drawer + brand azure; circular `touch-action: pan-y`; schedule short pills ≥44px (C-55/56/57). Shots: `memory/waves/W-21-mobile-premium/after/`.
+- 2026-09-11 W-22: header CTA ≥44 + safe-area; formats desc always on mobile; magazine «Открыть» pill cards (C-58/59/60). Shots: `memory/waves/W-22-mobile-premium/after/`.
+- 2026-09-11 W-23: cal month nav 44; header logo-only ≤430; podcast PDF mobile card (C-61/62/63). Final audit issues=[]. Shots: `memory/waves/W-23-mobile-premium/final/`.

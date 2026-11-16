@@ -1,0 +1,91 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "no-breadcrumb-path",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "title-iul",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "steps-file-tab",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "preview-no-forced-yscroll",
+      "ok": true,
+      "detail": {
+        "overflowY": "visible",
+        "overflowing": false,
+        "shellOy": "visible",
+        "shellOverflow": false,
+        "maxHeight": "none"
+      }
+    },
+    {
+      "name": "signatures-add-visible",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "plaques-horizontal",
+      "ok": true,
+      "detail": {
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "left": 320,
+        "parentLeft": 320
+      }
+    },
+    {
+      "name": "plaques-left-aligned",
+      "ok": true,
+      "detail": {
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "left": 320,
+        "parentLeft": 320
+      }
+    },
+    {
+      "name": "plaques-near-left-edge",
+      "ok": true,
+      "detail": {
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "left": 320,
+        "parentLeft": 320
+      }
+    },
+    {
+      "name": "title-waybill",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "no-breadcrumb-waybill",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "steps-template",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "registry-primary",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "registry-save-small",
+      "ok": true,
+      "detail": null
+    }
+  ]
+}

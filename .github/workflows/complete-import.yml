@@ -1,0 +1,53 @@
+name: Complete OfficeTemp import
+
+on:
+  push:
+    paths:
+      - '.migration/**'
+      - '.github/workflows/complete-import.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore and verify large source files
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          root = Path.cwd().resolve()
+          def checked(value):
+              path = (root / value).resolve()
+              if not path.is_relative_to(root) or path == root or '.git' in path.relative_to(root).parts:
+                  raise ValueError('Invalid import path')
+              return path
+          manifest = checked('.migration/large-files.json')
+          items = json.loads(manifest.read_text(encoding='utf8'))
+          for item in items:
+              parts = [checked(value) for value in item['parts']]
+              if any(not path.is_relative_to(root / '.migration/parts') for path in parts):
+                  raise ValueError('Invalid part path')
+              data = b''.join(path.read_bytes() for path in parts)
+              if hashlib.sha256(data).hexdigest() != item['sha256']:
+                  raise ValueError('Source checksum mismatch: ' + item['path'])
+              target = checked(item['path'])
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(data)
+              print('Verified: ' + item['path'])
+              for path in parts:
+                  path.unlink()
+          manifest.unlink()
+          PY
+      - name: Commit the completed import
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m 'chore: complete verified OfficeTemp source import'
+          git push origin HEAD:main

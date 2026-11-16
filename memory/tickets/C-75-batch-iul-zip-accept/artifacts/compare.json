@@ -1,0 +1,57 @@
+{
+  "sources": 4,
+  "iuls": 4,
+  "matched_ok": 4,
+  "all_ok": true,
+  "zip": "IULy_2026-09-24_15-09.zip",
+  "results": [
+    {
+      "source": "56-0321-ОК-1 АР1(2)(1)(1).2 ИЗМ3.pdf",
+      "source_sha256": "5cf5d09f8ec7d9d12e55be9a679c57fd8f3a96c31985df860ae58dd6234f9678",
+      "source_size": 24543435,
+      "iul": "56-0321-ОК-1 АР1(2)(1)(1).2 ИЗМ3_УЛ_2026-09-24.pdf",
+      "iul_size": 8726,
+      "mentions_hash": true,
+      "mentions_size": true,
+      "mentions_ascii_code": true,
+      "paired_by_filename": true,
+      "ok": true
+    },
+    {
+      "source": "56-0321-ОК-1-1-КЖ4(1)(1)(1).1_Изм.3.pdf",
+      "source_sha256": "b353d11ae045e0dd10f29c359605d88436509d370a2d26d13d0da30db1ea2e22",
+      "source_size": 5162534,
+      "iul": "56-0321-ОК-1-1-КЖ4(1)(1)(1).1_Изм.3_УЛ_2026-09-24.pdf",
+      "iul_size": 13602,
+      "mentions_hash": true,
+      "mentions_size": true,
+      "mentions_ascii_code": true,
+      "paired_by_filename": true,
+      "ok": true
+    },
+    {
+      "source": "56-0321-ОК-1-1-КЖ9(1)(1)(1).1_Изм.2.pdf",
+      "source_sha256": "e9fb0e30df340e0b49d0ae7c63512b4a205ba379031b23b71d8a02dd91d8b2da",
+      "source_size": 2954925,
+      "iul": "56-0321-ОК-1-1-КЖ9(1)(1)(1).1_Изм.2_УЛ_2026-09-24.pdf",
+      "iul_size": 14371,
+      "mentions_hash": true,
+      "mentions_size": true,
+      "mentions_ascii_code": true,
+      "paired_by_filename": true,
+      "ok": true
+    },
+    {
+      "source": "56-0321-ОК-1-КЖ3(1)(1)(1).3 (Изм.1) Вертикальные несущие конструкции шумозащитного экрана на отм. -2,500. Паркинг.pdf",
+      "source_sha256": "2736cf64c8fac40ce9fa5eaf28540a2a9b942cfdc7078a9e0443f1fbbc17a506",
+      "source_size": 2938380,
+      "iul": "56-0321-ОК-1-КЖ3(1)(1)(1).3 (Изм.1) Вертикальные несущие конструкции шумозащитного экрана на отм. -2,500. Паркинг_УЛ_2026-09-24.pdf",
+      "iul_size": 14681,
+      "mentions_hash": true,
+      "mentions_size": true,
+      "mentions_ascii_code": true,
+      "paired_by_filename": true,
+      "ok": true
+    }
+  ]
+}

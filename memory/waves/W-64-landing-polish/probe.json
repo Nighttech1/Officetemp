@@ -1,0 +1,20 @@
+{
+  "css": {
+    "shimmerRule": null,
+    "has56": true
+  },
+  "trio": {
+    "h": 470,
+    "padTop": "56px"
+  },
+  "usecases": {
+    "cards": 8,
+    "arrows": 0
+  },
+  "capabilities": {
+    "hBefore": 478,
+    "hAfterHover": 478,
+    "stable": true,
+    "activeAfterHover": 2
+  }
+}

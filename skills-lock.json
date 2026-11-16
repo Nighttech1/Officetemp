@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "skills": {
+    "21st-ai": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-ai/SKILL.md",
+      "computedHash": "4e3780f912107670a5fd109af7e21acc8f25580b3e2335fd93d50d31af74a34c"
+    },
+    "21st-cli-use": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-cli-use/SKILL.md",
+      "computedHash": "ef2e2f0516771e0a0d2b68a0bc67d553a82f8a1bcfb422c264b1f91ce7852767"
+    },
+    "21st-design-sync": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-design-sync/SKILL.md",
+      "computedHash": "7ac3769f89e67ad048cbbd50cf35c00bd871259257a472c73321fc9d450caca9"
+    },
+    "21st-registry": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-registry/SKILL.md",
+      "computedHash": "47cd10719b117ef90e17dd3c03506d450eca442df76d6e1de7b034d7a64413d6"
+    },
+    "21st-ui-build": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-ui-build/SKILL.md",
+      "computedHash": "7a038c5e51623312640b591688dad2c578d90a8a344137c1a05e599b1491bf90"
+    },
+    "21st-ui-explore": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-ui-explore/SKILL.md",
+      "computedHash": "abd634b3cf3fc9b0b96bdb37357da4d16ae3b509589f75be5a70290927b61c1c"
+    },
+    "21st-ui-review": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-ui-review/SKILL.md",
+      "computedHash": "ce7470a4777379716282b5a410a8a3211ac51a763786f6b81c3abcd282c220ab"
+    },
+    "api-commerce-stripe": {
+      "source": "agents-inc/skills",
+      "sourceType": "github",
+      "skillPath": "src/skills/api-commerce-stripe/SKILL.md",
+      "computedHash": "06ea4e92798a19e8f4b10ef292e14e2b06a5db42747772942a0213fce2c21278"
+    },
+    "api-security-review": {
+      "source": "OWASP/secure-agent-playbook",
+      "sourceType": "github",
+      "skillPath": "plugins/code-security-skills/skills/api-security-review/SKILL.md",
+      "computedHash": "fac03deef4e335dcae09bd9b7687489881261e8abdc6cbcb6e160cb81e571fda"
+    },
+    "audit": {
+      "source": "oktsec/audit",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "e90dca1c65984fb27db85e2f43b90aa4115864172b73ceed3ecef83575392792"
+    },
+    "code-review-security": {
+      "source": "OWASP/secure-agent-playbook",
+      "sourceType": "github",
+      "skillPath": "plugins/code-security-skills/skills/code-review-security/SKILL.md",
+      "computedHash": "1d4ca3f0c384b938faaef2493cf0da2aaa011f9b522905373d5294d11bf41db8"
+    },
+    "color-expert": {
+      "source": "meodai/skill.color-expert",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "4d481ba5bade83d51f37dc9bee069555bf6e237a2262884dd9e60804df1e6b4d"
+    },
+    "design-engineering": {
+      "source": "AgentsORG/design-engineering",
+      "sourceType": "github",
+      "skillPath": "skills/design-engineering/SKILL.md",
+      "computedHash": "8096177d6938f6fdfc0c6f09bf4e6edc144f38956bb06ff0cbf81230a93d3944"
+    },
+    "design-motion-principles": {
+      "source": "kylezantos/design-motion-principles",
+      "sourceType": "github",
+      "skillPath": "skills/design-motion-principles/SKILL.md",
+      "computedHash": "ca263e4515ddd34e412c841a2b35c2898a2a2122744836fdd003f0a2552192d6"
+    },
+    "document-docx": {
+      "source": "vasilyu1983/AI-Agents-public",
+      "sourceType": "github",
+      "skillPath": "frameworks/shared-skills/skills/document-docx/SKILL.md",
+      "computedHash": "35889628105c158176019010837af0a89b64944406d39b563d46e9efcf3b63bf"
+    },
+    "hf-cli": {
+      "source": "huggingface/skills",
+      "sourceType": "github",
+      "skillPath": "skills/hf-cli/SKILL.md",
+      "computedHash": "2a1400c7387a5d87a776a9b5313be2254988bb26db46d9e035f4ce1791e40e45"
+    },
+    "huggingface-best": {
+      "source": "huggingface/skills",
+      "sourceType": "github",
+      "skillPath": "skills/huggingface-best/SKILL.md",
+      "computedHash": "31eeb3a90dc9562122929138784c065998defa8f6985a759f04b09e8873a4520"
+    },
+    "motion-design": {
+      "source": "LottieFiles/motion-design-skill",
+      "sourceType": "github",
+      "skillPath": "skills/motion-design/SKILL.md",
+      "computedHash": "4f16f46c81f25a2a25b7a4720b7ea001e65f384b31b5b7f4b455fef87fbc9016"
+    },
+    "sca-audit": {
+      "source": "OWASP/secure-agent-playbook",
+      "sourceType": "github",
+      "skillPath": "plugins/code-security-skills/skills/sca-audit/SKILL.md",
+      "computedHash": "2653082ff85d1ff48679561dfdd548638f5b90836ee052f98f66ba4cdb26a6aa"
+    },
+    "secrets-scan": {
+      "source": "OWASP/secure-agent-playbook",
+      "sourceType": "github",
+      "skillPath": "plugins/code-security-skills/skills/secrets-scan/SKILL.md",
+      "computedHash": "a23315e493dbc8dcf31deef2effc670661a1ed58de4afd10db66269c4d6df64a"
+    },
+    "supabase-postgres-best-practices": {
+      "source": "supabase/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/supabase-postgres-best-practices/SKILL.md",
+      "computedHash": "128fac78002d916c8ca908245d398e634f540d8bcf20915b2b2359aeb18eba59"
+    },
+    "train-sentence-transformers": {
+      "source": "huggingface/skills",
+      "sourceType": "github",
+      "skillPath": "skills/train-sentence-transformers/SKILL.md",
+      "computedHash": "a4cb483748d9ca2b9d3faa1340e3896389a95798a5dae1aeef13df2b1c31af56"
+    },
+    "transformers-js": {
+      "source": "huggingface/skills",
+      "sourceType": "github",
+      "skillPath": "skills/transformers-js/SKILL.md",
+      "computedHash": "1fca591721276bc2bc240759320a10ed5165602c9dd639265d359acee5fb6388"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "6b526d013e28073246a36f99b529bc43745d30832ecfa8217b359c34f260ca6b"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "d8e7d3afe37dcc8a97b99ffb5afdb4d0919ae0092ea8b68f44eb201f035e33ac"
+    },
+    "web-security-review": {
+      "source": "OWASP/secure-agent-playbook",
+      "sourceType": "github",
+      "skillPath": "plugins/code-security-skills/skills/web-security-review/SKILL.md",
+      "computedHash": "26e11a326ea825f8389ee554c8ce049f908e03ab3a71fae8fb949b5a849b977c"
+    }
+  }
+}

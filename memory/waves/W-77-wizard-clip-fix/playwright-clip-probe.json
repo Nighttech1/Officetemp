@@ -1,0 +1,30 @@
+[
+  {
+    "name": "iul",
+    "card": {
+      "x": 320,
+      "y": 254.1875,
+      "width": 640,
+      "height": 855.390625
+    },
+    "overflowY": "auto",
+    "controls": 17,
+    "clippedHidden": [],
+    "pageCanScroll": true,
+    "ok": true
+  },
+  {
+    "name": "waybill",
+    "card": {
+      "x": 320,
+      "y": 254.15017700195312,
+      "width": 640,
+      "height": 895.4687194824219
+    },
+    "overflowY": "auto",
+    "controls": 27,
+    "clippedHidden": [],
+    "pageCanScroll": true,
+    "ok": true
+  }
+]

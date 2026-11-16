@@ -1,0 +1,21 @@
+{
+  "navBg": "rgb(232, 232, 230)",
+  "heroBg": "rgb(232, 232, 230)",
+  "navHeroMatch": true,
+  "ctaBg": "rgb(34, 197, 94)",
+  "hasDemoBtn": false,
+  "statsCount": 3,
+  "arrowButtons": 0,
+  "faqShimmer": true,
+  "capsDark": "rgb(10, 10, 10)",
+  "footerHasCta": true,
+  "login": {
+    "open": true,
+    "hasExtraTitle": false,
+    "hasPasswordInput": true,
+    "hasEmailInput": true,
+    "lineCount": 3
+  },
+  "megaOpen": true,
+  "megaText": "Шаблоны Word\nЗагрузка DOCX и разбор тегов\nДанные из таблиц\nExcel, Google, Яндекс"
+}

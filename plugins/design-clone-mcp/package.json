@@ -1,0 +1,42 @@
+{
+  "name": "@minutelaunch/design-clone-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for cloning website designs with Puppeteer - One command, just works",
+  "type": "module",
+  "bin": {
+    "design-clone-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "puppeteer",
+    "web-scraping",
+    "design-clone",
+    "cursor",
+    "claude"
+  ],
+  "author": "MinuteLaunch",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wplaunchify/design-clone-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "puppeteer": "^22.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+

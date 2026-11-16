@@ -1,0 +1,67 @@
+{
+  "title": "\u0423\u0441\u043b\u0443\u0433\u0438",
+  "services": {
+    "n": 12,
+    "gaps": [
+      16,
+      16,
+      16,
+      16,
+      16
+    ],
+    "trackPadL": "0px",
+    "lenisPrevent": true,
+    "titleOk": "\u0423\u0441\u043b\u0443\u0433\u0438"
+  },
+  "scrollLock": {
+    "beforeY": 2446,
+    "afterY": 2446,
+    "deltaY": 0,
+    "transform": "translate3d(-797.276px, 0px, 0px)",
+    "locked": true
+  },
+  "integrations": {
+    "gaps": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "padL": "0px",
+    "count": 16
+  },
+  "faq": {
+    "beforeH": 74,
+    "hoverH": 187,
+    "expanded": "true",
+    "leftH": 74,
+    "leftExpanded": "false",
+    "hoverOpens": true,
+    "leaveCloses": true
+  },
+  "login": {
+    "open": true,
+    "labels": [
+      {
+        "text": "\u041b\u043e\u0433\u0438\u043d",
+        "weight": "700",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "text": "\u041f\u0430\u0440\u043e\u043b\u044c",
+        "weight": "700",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "inputs": [
+      {
+        "weight": "600",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "weight": "600",
+        "color": "rgb(0, 0, 0)"
+      }
+    ]
+  }
+}

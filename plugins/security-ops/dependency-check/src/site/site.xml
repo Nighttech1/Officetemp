@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+This file is part of dependency-check.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Copyright (c) 2013 Jeremy Long. All Rights Reserved.
+-->
+<site xmlns="http://maven.apache.org/SITE/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd"
+      name="dependency-check-maven">
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>2.0.0-M11</version>
+    </skin>
+    <custom>
+        <fluidoSkin>
+            <!--googleSearch/-->
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+            <sideBarEnabled>true</sideBarEnabled>
+            <gitHub>
+                <projectId>jeremylong/DependencyCheck</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>gray</ribbonColor>
+            </gitHub>
+            <twitter>
+                <user>ctxt</user>
+                <showUser>true</showUser>
+                <showFollowers>true</showFollowers>
+            </twitter>
+            <googlePlusOne />
+        </fluidoSkin>
+    </custom>
+    <bannerLeft>
+        <image src="./images/dc.svg" alt="OWASP dependency-check"/>
+    </bannerLeft>
+
+    <publishDate position="right" />
+    <version position="right" />
+    <poweredBy>
+        <logo
+            href="https://www.ej-technologies.com/products/jprofiler/overview.html">
+            <image alt="JProfiler Java Profiler" width="170px"
+                   src="https://jeremylong.github.io/DependencyCheck/images/logos/jprofiler.png"/>
+        </logo>
+        <logo
+            href="http://www.jetbrains.com/idea/">
+            <image alt="developed using IntelliJ" width="170px"
+                   src="https://jeremylong.github.io/DependencyCheck/images/logos/logo_intellij_idea.png"/>
+        </logo>
+    </poweredBy>
+
+    <body>
+        <head>
+            <![CDATA[<style type="text/css">
+                #bannerLeft { margin-top:-20px;margin-bottom:5px !important}
+                a.externalLink[href^=https]{padding-right:inherit;background-image:none !important}
+                a.externalLink[href^=http]{padding-right:inherit;background-image:none !important}
+            </style>]]>
+        </head>
+        <breadcrumbs>
+            <item name="OWASP" href="https://www.owasp.org/"/>
+            <item name="Dependency-Check" href="https://www.owasp.org/index.php/OWASP_Dependency_Check"/>
+            <item name="documentation" href="./"/>
+        </breadcrumbs>
+
+        <menu name="OWASP dependency-check">
+            <item collapse="true" name="General" href="./index.html">
+                <item name="How it Works" href="./general/internals.html"/>
+                <item name="Reading the Report" href="./general/thereport.html"/>
+                <item name="False Positives" href="./general/suppression.html"/>
+                <item name="False Negatives" href="./general/hints.html"/>
+                <item collapse="true" name="Internet Access Required" href="./data/index.html">
+                    <item name="Proxy" href="./data/proxy.html" />
+                    <item name="Mirroring NVD" href="./data/mirrornvd.html" />
+                    <item name="Snapshotting the NVD" href="./data/cachenvd.html" />
+                    <item name="Caching the Database" href="./data/cacheh2.html" />
+                    <item name="Central DB" href="./data/database.html" />
+                    <item name="Sonatype OSS Index" href="./data/ossindex.html" />
+                </item>
+                <item name="Related Work" href="./related.html"/>
+                <item name="Project Presentation (pptx)" href="./general/dependency-check.pptx"/>
+                <item name="Project Presentation (pdf)" href="./general/dependency-check.pdf"/>
+                <item name="Sample Report" href="./general/SampleReport.html"/>
+                <item name="How to Scan an ISO Image" href="./general/scan_iso.html"/>
+            </item>
+            <item collapse="true" name="File Type Analyzers" href="./analyzers/index.html">
+                <item name="Archive" href="./analyzers/archive-analyzer.html"/>
+                <item name="Assembly" href="./analyzers/assembly-analyzer.html"/>
+                <item name="Autoconf" href="./analyzers/autoconf.html"/>
+                <item name="Central" href="./analyzers/central-analyzer.html"/>
+                <item name="CMake" href="./analyzers/cmake.html"/>
+                <item name="CocoaPods" href="./analyzers/cocoapods.html"/>
+                <item name="Carthage" href="./analyzers/carthage.html"/>
+                <item name="Jar" href="./analyzers/jar-analyzer.html"/>
+                <item name="Nexus" href="./analyzers/nexus-analyzer.html"/>
+                <item name="Node.js" href="./analyzers/nodejs.html"/>
+                <item name="Nuspec" href="./analyzers/nuspec-analyzer.html"/>
+                <item name="OpenSSL" href="./analyzers/openssl.html"/>
+                <item name="Python" href="./analyzers/python.html"/>
+                <item name="Ruby Gemspec" href="./analyzers/ruby-gemspec.html"/>
+                <item name="Swift" href="./analyzers/swift.html"/>
+            </item>
+            <item collapse="true" name="Modules" href="./modules.html">
+                <item name="CLI" href="./dependency-check-cli/index.html"/>
+                <item name="Ant Task" href="./dependency-check-ant/index.html"/>
+                <item name="Maven Plugin" href="./dependency-check-maven/index.html"/>
+                <item collapse="true" name="Gradle Plugin" href="./dependency-check-gradle/index.html">
+                    <item name="Analyze Task" href="./dependency-check-gradle/configuration.html" />
+                    <item name="Update Task" href="./dependency-check-gradle/configuration-update.html" />
+                    <item name="Purge Task" href="./dependency-check-gradle/configuration-purge.html" />
+                </item>
+                <item name="Jenkins Plugin" href="./dependency-check-jenkins/index.html"/>
+                <item name="Core" href="./dependency-check-core/index.html"/>
+                <item name="Utils" href="./dependency-check-utils/index.html"/>
+                <item name="Archetype" href="./dependency-check-plugin/index.html"/>
+            </item>
+        </menu>
+        <menu ref="reports" />
+    </body>
+</site>

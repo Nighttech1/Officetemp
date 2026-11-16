@@ -1,0 +1,1031 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Magic UI / Radix accordion (file-tree) */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+:root {
+  --color-brand: #22c55e;
+  --color-brand-hover: #4ade80;
+  --color-brand-muted: #14532d;
+  --color-brand-ink: #bbf7d0;
+  --color-surface: #09090b;
+  --color-surface-card: #18181b;
+  --color-surface-muted: #27272a;
+  --color-ink: #fafafa;
+  --color-ink-soft: #d4d4d8;
+  --color-ink-muted: #a1a1aa;
+  --color-line: #3f3f46;
+  --color-danger: #f87171;
+  --color-danger-soft: rgba(248, 113, 113, 0.12);
+  --color-ok: #4ade80;
+  --color-ok-soft: rgba(74, 222, 128, 0.12);
+  --radius: 0.75rem;
+  --touch-min: 44px;
+  /* Marketing landing (Dayos-inspired rhythm, DocSaaS brand) */
+  --color-landing-dark: #0a0a0a;
+  --color-landing-cream: #f7f7f5;
+  --color-landing-grey: #e8e8e6;
+  --color-landing-ink: #111111;
+  --color-landing-muted: #8d8a83;
+
+  /* shadcn / MultiButton token aliases → DocSaaS brand/surface */
+  --primary: var(--color-brand);
+  --primary-foreground: #052e16;
+  --background: var(--color-surface);
+  --foreground: var(--color-ink);
+  --secondary: var(--color-surface-muted);
+  --secondary-foreground: var(--color-ink);
+  --muted: var(--color-surface-card);
+  --accent: rgba(47, 198, 246, 0.16);
+  --accent-foreground: #e0f7ff;
+  --border: var(--color-line);
+  --ring: var(--color-brand);
+}
+
+.bg-landing-grey {
+  background-color: var(--color-landing-grey);
+}
+.bg-landing-cream {
+  background-color: var(--color-landing-cream);
+}
+.bg-landing-dark {
+  background-color: var(--color-landing-dark);
+}
+.text-landing-ink {
+  color: var(--color-landing-ink);
+}
+.text-landing-cream {
+  color: var(--color-landing-cream);
+}
+.text-landing-muted {
+  color: var(--color-landing-muted);
+}
+.text-landing-dark {
+  color: var(--color-landing-dark);
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, Futura,
+    "Trebuchet MS", Arial, sans-serif;
+  font-size: 16px; /* базовый кегль; UI floor 14px, cap 18px */
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* C-205: без «дешёвых» видимых horizontal scrollbar на UI/таблицах */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* C-209: тонкий брендовый вертикальный скролл (дерево проектов) */
+.scrollbar-brand {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 197, 94, 0.5) rgba(255, 255, 255, 0.06);
+}
+.scrollbar-brand::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollbar-brand::-webkit-scrollbar-track {
+  margin: 4px 0;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+}
+.scrollbar-brand::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 0.65),
+    rgba(34, 197, 94, 0.28)
+  );
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.scrollbar-brand::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.8);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.scrollbar-brand::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* UI floor — только кабинет `/app` (C-148). Маркетинг `/` свободен для display type. */
+html {
+  overflow-x: clip;
+  color-scheme: dark;
+  font-size: 16px;
+}
+
+[data-ui-floor="app"] h1,
+[data-ui-floor="app"] h2,
+[data-ui-floor="app"] h3,
+[data-ui-floor="app"] .text-2xl,
+[data-ui-floor="app"] .text-3xl,
+[data-ui-floor="app"] .text-4xl,
+[data-ui-floor="app"] .text-5xl,
+[data-ui-floor="app"] .text-6xl,
+[data-ui-floor="app"] .text-7xl,
+[data-ui-floor="app"] .text-8xl,
+[data-ui-floor="app"] .text-9xl {
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+}
+
+[data-ui-floor="app"] .text-\[10px\],
+[data-ui-floor="app"] .text-\[9px\],
+[data-ui-floor="app"] .text-\[8px\],
+[data-ui-floor="app"] .text-\[11px\],
+[data-ui-floor="app"] .text-\[12px\],
+[data-ui-floor="app"] .text-\[13px\] {
+  font-size: 14px !important;
+}
+
+/* Факсимиле ИУЛ — Times New Roman 10pt как в Word (не поднимать до UI floor) */
+.iul-sheet-preview {
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 10pt !important;
+  line-height: 1.25;
+}
+.iul-sheet-preview .text-\[9px\],
+.iul-sheet-preview .text-\[10px\],
+.iul-sheet-preview .text-\[11px\],
+.iul-sheet-preview .text-\[12px\],
+.iul-sheet-preview .text-\[13px\] {
+  font-size: 10pt !important;
+}
+
+/* Skip link — visible on keyboard focus only */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  background: var(--color-brand);
+  color: #09090b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--color-brand-ink);
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Aurora blobs — CSS only; paused for reduced motion */
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.62;
+  will-change: transform;
+  animation: aurora-drift 16s ease-in-out infinite;
+}
+
+.aurora-blob--soft {
+  opacity: 0.28;
+  filter: blur(96px);
+}
+
+.aurora-blob-a {
+  top: -18%;
+  left: -12%;
+  width: min(68vw, 560px);
+  height: min(68vw, 560px);
+  background: radial-gradient(circle, #22c55e 0%, rgba(34, 197, 94, 0.15) 45%, transparent 72%);
+}
+
+.aurora-blob-b {
+  top: 8%;
+  right: -14%;
+  width: min(62vw, 520px);
+  height: min(62vw, 520px);
+  background: radial-gradient(circle, #22d3ee 0%, rgba(34, 211, 238, 0.12) 48%, transparent 72%);
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+.aurora-blob-c {
+  bottom: -22%;
+  left: 18%;
+  width: min(72vw, 600px);
+  height: min(72vw, 600px);
+  background: radial-gradient(circle, #14b8a6 0%, rgba(20, 184, 166, 0.1) 50%, transparent 70%);
+  animation-delay: -10s;
+  animation-duration: 24s;
+  opacity: 0.48;
+}
+
+.aurora-blob--soft.aurora-blob-c {
+  opacity: 0.22;
+}
+
+/* Soft vertical spotlight (Aceternity-style) */
+.aurora-beam {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  width: min(42vw, 280px);
+  height: 140%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 0.18) 0%,
+    rgba(255, 255, 255, 0.06) 35%,
+    transparent 75%
+  );
+  filter: blur(40px);
+  opacity: 0.7;
+  animation: aurora-beam-pulse 10s ease-in-out infinite;
+}
+
+/* Subtle mesh grid */
+.aurora-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  opacity: 0.55;
+}
+
+@keyframes aurora-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(5%, 4%, 0) scale(1.08);
+  }
+  66% {
+    transform: translate3d(-4%, 6%, 0) scale(0.94);
+  }
+}
+
+@keyframes aurora-beam-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateX(-50%) scaleY(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(-48%) scaleY(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob,
+  .aurora-beam {
+    animation: none !important;
+  }
+
+  .shimmer-btn::after {
+    animation: none !important;
+    display: none;
+  }
+}
+
+/* Shimmer CTA highlight */
+.shimmer-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 75%
+  );
+  transform: translateX(-120%);
+  animation: shimmer-sweep 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer-sweep {
+  0%,
+  55% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+/* Visually hidden honeypot */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* True dark glass card (not milky frosted white) */
+.glass-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(9, 9, 11, 0.92);
+  padding: 1.5rem;
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.14),
+    0 24px 64px -16px rgba(0, 0, 0, 0.8),
+    0 0 48px -12px rgba(34, 197, 94, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-ink);
+}
+
+@media (min-width: 640px) {
+  .glass-card {
+    padding: 2rem;
+  }
+}
+
+/* Dark form controls */
+.field-control {
+  min-height: var(--touch-min);
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(63, 63, 70, 0.9);
+  background: rgba(24, 24, 27, 0.95);
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  color: var(--color-ink);
+}
+
+.field-control::placeholder {
+  color: #71717a;
+}
+
+.field-control:focus {
+  border-color: var(--color-brand);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.35);
+}
+
+/* ——— Marketing landing ——— */
+
+.landing-root {
+  color-scheme: dark;
+  overflow-x: clip;
+}
+
+.landing-grain {
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+.landing-hero-glow {
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 20%, rgba(34, 197, 94, 0.12), transparent 55%),
+    radial-gradient(ellipse 55% 45% at 85% 70%, rgba(236, 233, 226, 0.06), transparent 50%);
+}
+
+/* W-60 C-149 — soft floating blobs (21st-inspired 19381), brand palette */
+.landing-hero-blob {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .landing-hero-blob--a {
+    animation: landing-blob-drift-a 18s ease-in-out infinite alternate;
+  }
+  .landing-hero-blob--b {
+    animation: landing-blob-drift-b 22s ease-in-out infinite alternate;
+  }
+  .landing-hero-blob--c {
+    animation: landing-blob-drift-c 26s ease-in-out infinite alternate;
+  }
+  .landing-hero-blob--d {
+    animation: landing-blob-drift-d 16s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes landing-blob-drift-a {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(6%, 8%, 0) scale(1.08); }
+}
+@keyframes landing-blob-drift-b {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-7%, 5%, 0) scale(1.06); }
+}
+@keyframes landing-blob-drift-c {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(4%, -6%, 0) scale(1.1); }
+}
+@keyframes landing-blob-drift-d {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-5%, -4%, 0) scale(1.12); }
+}
+
+/* C-159 — soft CTA shimmer (21st 27898 spirit) */
+.landing-shimmer-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.35) 45%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .landing-shimmer-cta::after {
+    animation: landing-cta-shimmer 5.6s ease-in-out infinite;
+  }
+}
+
+@keyframes landing-cta-shimmer {
+  0%,
+  35% {
+    transform: translateX(-120%);
+  }
+  65%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+/* C-169 FAQ card hover shine */
+.faq-shimmer-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(34, 197, 94, 0.12) 48%,
+    transparent 65%
+  );
+  transform: translateX(-130%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.faq-shimmer-card:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .faq-shimmer-card:hover::before {
+    animation: landing-cta-shimmer 1.6s ease-out;
+  }
+}
+
+.landing-marquee {
+  overflow: hidden;
+  background-color: var(--color-landing-cream, #f3f1eb);
+  /* C-186/C-189: отступ 2× высоты полосы, тот же cream — без видимой «рамки» */
+  margin-bottom: calc(2 * (2.5rem + 1.75rem));
+  border: none;
+}
+
+.landing-marquee-track {
+  width: max-content;
+  will-change: transform;
+  animation: landing-marquee-scroll 36s linear infinite;
+}
+
+@keyframes landing-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* C-187: плавное подчёркивание ссылок футера */
+.footer-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  origin: left;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.footer-link-underline:hover::after,
+.footer-link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* C-31 cinema: showcase rail + process stack. Never hide .landing-reveal. */
+
+.landing-hero-word {
+  display: block;
+  overflow: visible;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.landing-showcase-pin {
+  position: relative;
+}
+
+.landing-showcase-stage {
+  overflow: visible;
+}
+
+.landing-showcase-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  will-change: transform;
+}
+
+.landing-showcase-rail .showcase-card {
+  width: 100%;
+  max-width: 22rem;
+}
+
+/* Mobile: vertical stack — no page overflow-x */
+@media (max-width: 767px) {
+  .landing-showcase-rail {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .landing-showcase-rail .showcase-card {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .landing-showcase-pin {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .landing-showcase-stage {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .landing-showcase-rail {
+    flex-direction: row;
+    gap: 1.75rem;
+    width: max-content;
+    padding-right: 10vw;
+  }
+
+  .landing-showcase-rail .showcase-card {
+    width: min(22rem, 28vw);
+    transform-origin: center bottom;
+    transition: filter 0.2s ease;
+  }
+
+  .landing-showcase-rail .showcase-card.is-dominant {
+    filter: none;
+    z-index: 2;
+  }
+
+  .landing-showcase-progress {
+    letter-spacing: 0.28em;
+  }
+}
+
+.landing-process-stack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.landing-process-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  min-height: 11rem;
+  padding: 1.75rem 1.25rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .landing-process-stack {
+    gap: 0;
+  }
+
+  .landing-process-card {
+    min-height: min(70vh, 28rem);
+    padding: 3rem 2.5rem 2.5rem;
+    background: #0e0e0d;
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+}
+
+.landing-process-ghost {
+  position: absolute;
+  right: -0.05em;
+  bottom: -0.22em;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, Futura,
+    "Trebuchet MS", Arial, sans-serif;
+  font-size: clamp(6rem, 28vw, 14rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  color: rgba(236, 233, 226, 0.06);
+  pointer-events: none;
+  user-select: none;
+}
+
+.landing-process-card-body {
+  position: relative;
+  z-index: 1;
+  max-width: 28rem;
+}
+
+.showcase-visual {
+  position: relative;
+  background: #d8d4cb;
+}
+
+.showcase-visual--template {
+  background:
+    linear-gradient(145deg, #1a1a18 0%, #2a2a28 40%, transparent 41%),
+    linear-gradient(25deg, #c5c0b4, #ece9e2);
+}
+
+.showcase-visual--template::after {
+  content: "";
+  position: absolute;
+  inset: 18% 22%;
+  border: 1px solid rgba(14, 14, 13, 0.2);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+}
+
+.showcase-visual--map {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 14px,
+      rgba(14, 14, 13, 0.08) 14px,
+      rgba(14, 14, 13, 0.08) 15px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 18px,
+      rgba(14, 14, 13, 0.08) 18px,
+      rgba(14, 14, 13, 0.08) 19px
+    ),
+    linear-gradient(160deg, #e8e4dc, #b8d4ce);
+}
+
+.showcase-visual--map::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  top: 30%;
+  width: 28%;
+  height: 12%;
+  background: #22c55e;
+  opacity: 0.85;
+}
+
+.showcase-visual--queue {
+  background:
+    radial-gradient(circle at 30% 40%, rgba(34, 197, 94, 0.45), transparent 42%),
+    radial-gradient(circle at 70% 55%, rgba(14, 14, 13, 0.35), transparent 40%),
+    linear-gradient(200deg, #2c2c2a, #0e0e0d);
+}
+
+.showcase-visual--zip {
+  background:
+    linear-gradient(135deg, #ece9e2 25%, transparent 25%) -10px 0 / 28px 28px,
+    linear-gradient(225deg, #ece9e2 25%, transparent 25%) -10px 0 / 28px 28px,
+    linear-gradient(315deg, #ece9e2 25%, transparent 25%) 0 0 / 28px 28px,
+    linear-gradient(45deg, #ece9e2 25%, #3d3d3a 25%) 0 0 / 28px 28px;
+}
+
+.showcase-visual--law {
+  background:
+    linear-gradient(180deg, transparent 60%, rgba(34, 197, 94, 0.25) 100%),
+    linear-gradient(115deg, #1f1f1d, #4a4842);
+}
+
+.showcase-visual--law::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 22%;
+  width: 42%;
+  height: 52%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(236, 233, 226, 0.35);
+  border-radius: 2px 2px 40% 40%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-marquee-track {
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .landing-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .landing-hero-line-inner {
+    transform: none !important;
+  }
+}
+
+.landing-rounded-wrap {
+  position: relative;
+}
+
+.landing-rounded-inner {
+  overflow: hidden;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .landing-rounded-inner {
+    border-radius: 2.5rem;
+  }
+}
+
+.assembly-scene {
+  filter: drop-shadow(0 24px 40px rgba(17, 17, 17, 0.08));
+}
+
+.assembly-clay {
+  transform-style: preserve-3d;
+}
+
+/* Visibility for motion is owned by GSAP (LandingMotion).
+   Do NOT set .landing-reveal { opacity: 0 } in CSS — without JS the page stays blank. */
+
+/* Предпросмотр: одна плоскость, без вложенных рамок; toolbar overlay */
+.docx-preview-viewport {
+  /* Без горизонтального скролла: лист вписываем scale/pan */
+  overflow: hidden !important;
+  scrollbar-width: none;
+}
+.docx-preview-viewport::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.docx-preview-stage {
+  /* ширина задаётся transform scale; скролл режет viewport */
+  overflow: visible;
+}
+.docx-preview-viewport--pan,
+.docx-preview-viewport--pan * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  caret-color: transparent;
+}
+.docx-preview-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 0.4rem;
+  border: none;
+  background: transparent;
+  color: #27272a;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.docx-preview-tool-btn:hover:not(:disabled) {
+  background: color-mix(in oklab, #22c55e 18%, #fff);
+  color: #166534;
+}
+.docx-preview-tool-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.docx-preview-tool-btn--active {
+  background: color-mix(in oklab, #22c55e 28%, #fff);
+  color: #166534;
+}
+.docx-waybill-preview {
+  overflow: visible !important;
+  background: #fff;
+  border: none !important;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.12);
+  /* Шрифты — только из docx-preview / стилей Word (не подменять UI-шрифтом) */
+  font-family: Calibri, "Times New Roman", Times, serif;
+}
+.docx-waybill-preview .docx-wrapper {
+  background: #fff !important;
+  box-shadow: none !important;
+  width: max-content !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  border: none !important;
+}
+.docx-waybill-preview .docx-wrapper > section.docx,
+.docx-waybill-preview section.docx {
+  box-sizing: border-box !important;
+  box-shadow: none !important;
+  /* Не раздувать межстраничный зазор — как в Word */
+  margin: 0 !important;
+  overflow: visible !important;
+  background: #fff !important;
+  border: none !important;
+}
+.docx-waybill-preview article {
+  overflow: visible !important;
+}
+.docx-waybill-preview img {
+  max-width: none;
+  height: auto;
+}
+/* Ячейки таблиц — по центру, как в эталоне накладной */
+.docx-waybill-preview table td,
+.docx-waybill-preview table th,
+.docx-waybill-preview table td p,
+.docx-waybill-preview table th p {
+  text-align: center !important;
+}
+.docx-waybill-preview header,
+.docx-waybill-preview footer,
+.docx-waybill-preview [class*="header"],
+.docx-waybill-preview [class*="footer"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  color: #111 !important;
+  position: relative !important;
+  z-index: 1;
+  /* НЕ трогать margin-top/min-height — docx-preview задаёт calc(-…) как в Word */
+}
+/* Floating header img: размер задаёт JS (absolute в 0×0 wrapper) */
+.docx-waybill-preview header img,
+.docx-waybill-preview footer img,
+.docx-waybill-preview [class*="header"] img,
+.docx-waybill-preview [class*="footer"] img {
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Шаг 2: бегущий зелёный огонёк по единому контуру поля+кнопки */
+@keyframes cloud-connect-run {
+  to {
+    --cloud-angle: 360deg;
+  }
+}
+@property --cloud-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.cloud-connect-contour {
+  position: relative;
+  border-radius: 0.9rem;
+  padding: 2px;
+  isolation: isolate;
+  background: conic-gradient(
+    from var(--cloud-angle, 0deg),
+    #16a34a 0deg,
+    #4ade80 70deg,
+    #bbf7d0 120deg,
+    #16a34a 180deg,
+    #86efac 250deg,
+    #22c55e 300deg,
+    #16a34a 360deg
+  );
+  animation: cloud-connect-run 1.2s linear infinite;
+  box-shadow: 0 0 0 1px color-mix(in oklab, #22c55e 40%, transparent),
+    0 0 18px color-mix(in oklab, #22c55e 35%, transparent);
+}
+.cloud-connect-contour__inner {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: calc(0.9rem - 2px);
+  background: var(--card, var(--surface-card, #18181b));
+  padding: 0.55rem;
+}
+@media (min-width: 640px) {
+  .cloud-connect-contour__inner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/* fallback если @property не поддержан */
+@supports not (background: conic-gradient(from var(--cloud-angle), red, blue)) {
+  @keyframes cloud-connect-run-fallback {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+  .cloud-connect-contour {
+    background: linear-gradient(
+      90deg,
+      #16a34a,
+      #86efac,
+      #22c55e,
+      #bbf7d0,
+      #16a34a
+    );
+    background-size: 200% 100%;
+    animation: cloud-connect-run-fallback 1s linear infinite;
+  }
+}

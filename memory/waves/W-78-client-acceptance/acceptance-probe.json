@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "id": "C-213",
+      "ok": true,
+      "detail": {
+        "texts": [
+          "Предпросмотр",
+          "ИУЛ — образец"
+        ],
+        "hits": []
+      }
+    },
+    {
+      "id": "C-214",
+      "ok": false,
+      "detail": {
+        "ok": false,
+        "heading": "1. Загрузка PDF с ЭЦП",
+        "hasMotionAttr": true
+      }
+    },
+    {
+      "id": "C-216-disabled-style",
+      "ok": false,
+      "detail": []
+    },
+    {
+      "id": "C-217-subdued",
+      "ok": false,
+      "detail": []
+    },
+    {
+      "id": "C-217-next-disabled",
+      "ok": false,
+      "detail": null
+    },
+    {
+      "id": "C-217-next-style",
+      "ok": false,
+      "detail": null
+    },
+    {
+      "id": "C-219-btn",
+      "ok": true,
+      "detail": {
+        "hasSettings": true
+      }
+    },
+    {
+      "id": "C-219-panel",
+      "ok": false,
+      "detail": {
+        "clicked": false,
+        "open": false,
+        "text": ""
+      }
+    },
+    {
+      "id": "C-218",
+      "ok": false,
+      "detail": {
+        "candidates": [],
+        "hasScroll": false,
+        "scrollable": null
+      }
+    },
+    {
+      "id": "C-215-artifacts",
+      "ok": true,
+      "detail": {
+        "screens": [
+          "rubik-baseline.png",
+          "rubik-resume-t0.png",
+          "rubik-resume-t400.png",
+          "rubik-resume-t1600.png"
+        ]
+      }
+    }
+  ]
+}

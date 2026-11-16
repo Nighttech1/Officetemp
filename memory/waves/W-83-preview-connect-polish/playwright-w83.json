@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "wave": "W-83",
+  "checks": [
+    {
+      "name": "C-821-header-image",
+      "ok": true,
+      "detail": { "headerImgCount": 2, "imgNatural": { "w": 1, "h": 1, "ow": 1 } }
+    },
+    {
+      "name": "C-820-toolbar-after-pan-void",
+      "ok": true,
+      "detail": { "zoomBefore": "54%", "zoomAfter": "59%", "enabled": true }
+    },
+    {
+      "name": "C-822-expected-time-copy",
+      "ok": true
+    },
+    {
+      "name": "C-822-no-status-plaque",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<!-- rule for excel-parser agent -->
+# Excel Parser
+
+Skill-first: `.cursor/skills/excel-parser/SKILL.md`.
+
+Парсит Excel/CSV → JSON rows. Не ходит в Google/Yandex (другие роли). Нормализацию контракта согласовать с Data Aggregator.
+
+`📊 **EXCEL PARSER:** [файл → columns/rows / лимиты]`

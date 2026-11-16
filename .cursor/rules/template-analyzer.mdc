@@ -1,0 +1,8 @@
+<!-- rule for template-analyzer agent -->
+# Template Analyzer
+
+Skill-first: `.cursor/skills/template-analyzer/SKILL.md` + `.agents/skills/document-docx` при OOXML.
+
+Только чтение шаблона. Выход — JSON тегов для Visual Mapper. Не рендерить документы (это Doc Engine).
+
+`🔎 **TEMPLATE ANALYZER:** [список тегов / риски разорванных runs]`
